@@ -4,9 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_blue">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="540dp"/>
+        android:layout_height="540dp">
+        <ImageView
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/temp_logo" />
+    </RelativeLayout>
     <LinearLayout
         android:layout_marginHorizontal="50dp"
         android:orientation="vertical"

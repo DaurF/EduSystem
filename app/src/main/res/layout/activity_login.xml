@@ -14,12 +14,18 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_marginTop="70dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/temp_logo" />
+
         <LinearLayout
             android:id="@+id/container2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="260dp"
+            android:layout_marginTop="60dp"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -30,6 +36,7 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -47,6 +54,7 @@
                 </EditText>
 
                 <EditText
+                    android:id="@+id/etPass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_lock"
@@ -65,6 +73,7 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="15dp"
@@ -72,6 +81,9 @@
                     android:background="@drawable/login_btn"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="Log in"
+                    android:elevation="8dp"
+                    android:translationZ="8dp"
+                    android:stateListAnimator="@null"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="15dp" />

@@ -74,8 +74,9 @@
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:paddingVertical="10dp"
+                android:elevation="5dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
                     android:layout_marginTop="8dp"
@@ -100,8 +101,9 @@
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:paddingVertical="10dp"
+                android:elevation="5dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
                     android:layout_marginTop="8dp"
@@ -126,8 +128,9 @@
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:paddingVertical="10dp"
+                android:elevation="5dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
                     android:layout_marginTop="8dp"
@@ -152,9 +155,10 @@
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:paddingBottom="8dp"
                 android:paddingVertical="10dp"
+                android:elevation="5dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
                     android:layout_marginTop="5dp"
@@ -179,9 +183,10 @@
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:paddingBottom="8dp"
                 android:paddingVertical="10dp"
+                android:elevation="5dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
                     android:layout_marginTop="5dp"
@@ -206,9 +211,10 @@
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:paddingBottom="8dp"
                 android:paddingVertical="10dp"
+                android:elevation="5dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
                     android:layout_marginTop="5dp"
