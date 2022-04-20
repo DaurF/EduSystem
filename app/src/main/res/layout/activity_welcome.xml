@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="540dp"/>
+    <LinearLayout
+        android:layout_marginHorizontal="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_btn"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_btn"
+            android:text="Sign In"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/blue"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_btn"
+            android:text="Create new account"
+            android:gravity="center"
+            android:padding="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</LinearLayout>
