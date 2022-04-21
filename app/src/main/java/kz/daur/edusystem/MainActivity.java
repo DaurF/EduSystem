@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.home:
                     replaceFragment(new HomeFragment());
                     break;
+                case R.id.chat:
+                    replaceFragment(new ChatFragment());
+                    break;
                 case R.id.profile:
                     replaceFragment(new ProfileFragment());
                     break;
@@ -46,9 +49,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
             return true;
-
-
         });
+
+
+        binding.bottomNavigationView.findViewById(R.id.profile).performClick();
+
+
     }
 
     private void replaceFragment(Fragment fragment) {
