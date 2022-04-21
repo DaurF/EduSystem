@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_gray"
+    android:background="@drawable/background_profile"
     tools:context=".ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,51 +12,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
+        android:background="@drawable/white_solid_corners"
         android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:fontFamily="@font/montserrat_alternates_semibold"
-                android:text="Profile"
-                android:textColor="@color/black"
-                android:textSize="34sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/white">
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:text="Name\nSurname\nPatronymic"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-                </LinearLayout>
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp">
 
-            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_launcher_corn"/>
+                <LinearLayout
+                    android:layout_marginVertical="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Richard Banks, 30"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nur-Sultan, Kazakhstan"
+
+
+                </LinearLayout>
             </LinearLayout>
 
 
         </LinearLayout>
+
+        </LinearLayout>
+
 
 
 </FrameLayout>
