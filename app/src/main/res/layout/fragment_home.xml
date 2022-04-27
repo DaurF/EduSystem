@@ -4,242 +4,258 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white_gray"
+    android:background="@drawable/background_home"
     tools:context=".HomeFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
-            android:padding="15dp"
-            android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_alternates_semibold"
-                android:text="Home"
-                android:layout_marginStart="10dp"
-                android:layout_centerVertical="true"
-                android:textColor="@color/black"
-                android:textSize="24dp" />
-            <ImageView
-                android:id="@+id/notification_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_notifications"/>
-        </RelativeLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c0c0c0"/>
-        <com.denzcoskun.imageslider.ImageSlider
-
-            android:id="@+id/image_slider"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:iss_auto_cycle="true"
-            app:iss_period="5000"
-            app:iss_delay="5000">
-
-        </com.denzcoskun.imageslider.ImageSlider>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c0c0c0"/>
-        <androidx.appcompat.widget.SearchView
-            android:layout_marginTop="20dp"
-            android:background="@drawable/search_background"
-            android:layout_marginHorizontal="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:queryHint="Search Here"
-            app:iconifiedByDefault="false">
+            android:layout_marginHorizontal="38dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
 
-        </androidx.appcompat.widget.SearchView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="EduS"
+                    android:textColor="@color/white"
+                    android:textSize="38sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get More Ads Space For Your Needs"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_white"
+                android:padding="9dp"
+                android:src="@drawable/ic_notifications" />
+        </RelativeLayout>
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:rowCount="2"
-            android:columnCount="3">
+            android:columnCount="2">
             <LinearLayout
                 android:id="@+id/btnCal"
                 android:orientation="vertical"
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="10dp"
-                android:paddingVertical="10dp"
-                android:elevation="5dp"
+                android:layout_margin="12dp"
+                android:paddingVertical="4dp"
+                android:elevation="2dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
                     android:layout_marginTop="8dp"
                     android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@drawable/ic_calendar">
+                    android:background="@drawable/ic_schedule">
                 </ImageView>
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Schedule"/>
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/black_light"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="2dp"
+                        android:text="Schedule"/>
+                    <TextView
+                        android:text="Know your schedule"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btnMap"
-                android:orientation="vertical"
-                android:layout_gravity="fill"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="10dp"
-                android:paddingVertical="10dp"
-                android:elevation="5dp"
-                android:background="@drawable/white_solid_corners">
-                <ImageView
-                    android:layout_marginTop="8dp"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/ic_map">
-                </ImageView>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Digital Map"/>
-            </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/btnLib"
                 android:orientation="vertical"
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="10dp"
-                android:paddingVertical="10dp"
-                android:elevation="5dp"
+                android:layout_margin="12dp"
+                android:paddingVertical="4dp"
+                android:elevation="2dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
-                    android:layout_marginTop="8dp"
                     android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@drawable/ic_library">
+                    android:background="@drawable/ic_books">
                 </ImageView>
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Library"/>
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/black_light"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="2dp"
+                        android:text="Library"/>
+                    <TextView
+                        android:text="Knowledge Catalog"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
-                android:id="@+id/btnPlat"
+                android:id="@+id/btnMap"
                 android:orientation="vertical"
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="10dp"
-                android:paddingBottom="8dp"
-                android:paddingVertical="10dp"
-                android:elevation="5dp"
+                android:layout_margin="12dp"
+                android:paddingVertical="4dp"
+                android:elevation="2dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
-                    android:layout_marginTop="5dp"
                     android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/ic_supervised_user_cicle">
+                    android:layout_marginTop="10dp"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/ic_map">
                 </ImageView>
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Platonus"/>
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/black_light"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="2dp"
+                        android:text="Map"/>
+                    <TextView
+                        android:text="University map"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/btnFaq"
                 android:orientation="vertical"
                 android:layout_gravity="fill"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_margin="10dp"
-                android:paddingBottom="8dp"
-                android:paddingVertical="10dp"
-                android:elevation="5dp"
+                android:layout_margin="12dp"
+                android:paddingVertical="4dp"
+                android:elevation="2dp"
                 android:background="@drawable/white_solid_corners">
                 <ImageView
-                    android:layout_marginTop="5dp"
                     android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@drawable/ic_help">
+                    android:background="@drawable/que_answ">
                 </ImageView>
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="FAQ"/>
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/black_light"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="2dp"
+                        android:text="FAQ"/>
+                    <TextView
+                        android:text="Q &#38; A"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btnContacts"
-                android:orientation="vertical"
-                android:layout_gravity="fill"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="10dp"
-                android:paddingBottom="8dp"
-                android:paddingVertical="10dp"
-                android:elevation="5dp"
-                android:background="@drawable/white_solid_corners">
-                <ImageView
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/ic_phone">
-                </ImageView>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Contacts"/>
-            </LinearLayout>
-
-
-
-
         </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Special Offer"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+
+        <com.denzcoskun.imageslider.ImageSlider
+
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="20dp"
+            app:iss_corner_radius="@integer/material_motion_duration_short_1"
+            app:iss_auto_cycle="true"
+            app:iss_period="5000"
+            app:iss_delay="5000">
+
+        </com.denzcoskun.imageslider.ImageSlider>
 
     </LinearLayout>
 
-
+    </ScrollView>
 </FrameLayout>

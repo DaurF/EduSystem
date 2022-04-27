@@ -1,18 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/background_profile"
     tools:context=".ProfileFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_profile_back"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:background="@null"
+            android:src="@drawable/ic_back_ios"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_settings" />
+
+    </RelativeLayout>
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="22dp"
         android:background="@drawable/white_solid_corners"
+        android:elevation="4dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,34 +75,257 @@
                     android:layout_marginRight="5dp"
                     android:src="@drawable/ic_launcher_corn"/>
                 <LinearLayout
-                    android:layout_marginVertical="20dp"
+                    android:layout_marginVertical="15dp"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
+                        android:layout_marginBottom="4dp"
                         android:fontFamily="@font/ubuntu_medium"
                         android:text="Richard Banks, 30"
                         android:textColor="@color/black"
-                        android:textSize="24dp"
+                        android:textSize="22dp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_location"
+                        android:drawablePadding="1dp"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:paddingVertical="3dp"
                         android:text="Nur-Sultan, Kazakhstan"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_date"
+                        android:drawablePadding="2dp"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:paddingVertical="3dp"
+                        android:text="November 25, 1991"
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textSize="14sp"
+                    android:text="Junior Front-End developer"
+                    android:drawableLeft="@drawable/ic_work"
+                    android:drawablePadding="4dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textSize="14sp"
+                    android:drawableLeft="@drawable/ic_school"
+                    android:text="Bachelor of Computer Science, AITU"
+                    android:drawablePadding="4dp"/>
+
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_extrabold"
+                android:text="Biography:"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"/>
+            <ScrollView
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:maxLines="3"
+                        android:text="I'm glad you decided to go to this profile. My name is Richard Banks and I am 30 years old. I am a junior front-end developer. I have two dogs. Their names are Marina and Messi. I also work as a school teacher. I have many hobbies. For example, I like to draw and read."
+                        android:textColor="@color/dark_gray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/description"
+                        android:layout_alignParentRight="true"
+                        android:clickable="true"
+                        android:fontFamily="@font/nunito_sans_extrabold"
+                        android:text="Read More"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/hide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Hide"
+                        android:fontFamily="@font/nunito_sans_extrabold"
+                        android:textColor="@color/blue"
+                        android:clickable="true"
+                        android:visibility="invisible"
+                        android:layout_below="@id/description"/>
+                </RelativeLayout>
+            </ScrollView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="38dp">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textColor="@color/white"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/btn_gradient_blue"
+                    android:drawableLeft="@drawable/ic_edit"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_block"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Block"
+                    android:textColor="@color/sky_blue"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/btn_white_stroke_blue"
+                    android:layout_marginLeft="20dp"
+                    android:drawablePadding="2dp"
+                    android:drawableLeft="@drawable/ic_block"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:id="@+id/profile_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="16dp"
+                android:background="@drawable/profile_info"
+                android:layout_weight="1">
+                <TextView
+                    android:text="45"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Friends"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/dark_gray"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="16dp"
+                android:background="@drawable/profile_info"
+                android:layout_weight="1">
+                <TextView
+                    android:text="7"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Photos"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/dark_gray"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="16dp"
+                android:background="@drawable/profile_info"
+                android:layout_weight="1">
+                <TextView
+                    android:text="3"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Videos"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/dark_gray"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="16dp"
+                android:background="@drawable/profile_info"
+                android:layout_weight="1">
+                <TextView
+                    android:text="432"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tags"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/dark_gray"
+                    android:gravity="center"/>
+            </LinearLayout>
 
         </LinearLayout>
 
-        </LinearLayout>
 
-
-
+    </LinearLayout>
 </FrameLayout>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -72,9 +73,8 @@ public class HomeFragment extends Fragment {
         imageSlider = view.findViewById(R.id.image_slider);
 
         ArrayList<SlideModel> imageList = new ArrayList<>();
-        imageList.add(new SlideModel(R.drawable.covid, null));
         imageList.add(new SlideModel(R.drawable.updates, null));
-        imageList.add(new SlideModel(R.drawable.nauryz, null));
+        imageList.add(new SlideModel(R.drawable.covid, null));
 
         imageSlider.setImageList(imageList);
 

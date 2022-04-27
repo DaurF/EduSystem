@@ -3,26 +3,43 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/btn_gradient.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/btn_gradient_blue.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/btn_white_stroke_blue.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/circle_white.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/covid_corners.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/example.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_block.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_calendar.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_date.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_edit.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_help.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_home.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_library.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_location.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_map.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_notifications.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_outline_school_24.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_outline_work_outline_24.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_phone.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_profile.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_school.xml" value="0.194" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_settings.xml" value="0.194" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/ic_supervised_user_cicle.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/profile_avatar_corners.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/profile_info.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/register_btn.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/search_background.xml" value="0.2535" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/drawable/white_solid_corners.xml" value="0.2535" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/activity_login.xml" value="0.36354166666666665" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/activity_register.xml" value="0.36354166666666665" />
+        <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/activity_welcome.xml" value="0.36354166666666665" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/fragment_profile.xml" value="0.3605072463768116" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/fragment_settings.xml" value="0.3605072463768116" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/layout/toolbar.xml" value="0.36354166666666665" />
         <entry key="..\:/Users/Admin/Desktop/EduSystem/app/src/main/res/menu/bottom_nav_menu.xml" value="0.359375" />
-        <entry key="..\:/Users/zhann/AndroidStudioProjects/EduSystem/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1675" />
-        <entry key="..\:/Users/zhann/AndroidStudioProjects/EduSystem/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1675" />
-        <entry key="..\:/Users/zhann/AndroidStudioProjects/EduSystem/app/src/main/res/drawable/ic_map.xml" value="0.1" />
         <entry key="..\:/Users/zhann/AndroidStudioProjects/EduSystem/app/src/main/res/drawable/ic_supervised_user_cicle.xml" value="0.137" />
         <entry key="..\:/Users/zhann/AndroidStudioProjects/EduSystem/app/src/main/res/drawable/layout_shadow.xml" value="0.137" />
         <entry key="..\:/Users/zhann/AndroidStudioProjects/EduSystem/app/src/main/res/drawable/white_solid_corners.xml" value="0.137" />

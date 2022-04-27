@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.util.concurrent.TimeUnit;
+
 import kz.daur.edusystem.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         View decorView = w.getDecorView();
         w.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         w.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        w.setStatusBarColor(ContextCompat.getColor(this, R.color.white));
-        decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
         replaceFragment(new HomeFragment());
 
@@ -37,27 +37,26 @@ public class MainActivity extends AppCompatActivity {
             switch(item.getItemId()) {
                 case R.id.home:
                     replaceFragment(new HomeFragment());
+                    w.setStatusBarColor(ContextCompat.getColor(this, R.color.dark_blue));
                     break;
                 case R.id.chat:
                     replaceFragment(new ChatFragment());
+                    w.setStatusBarColor(ContextCompat.getColor(this, R.color.white));
+                    decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
                     break;
                 case R.id.profile:
                     replaceFragment(new ProfileFragment());
-                    break;
-                case R.id.settings:
-                    replaceFragment(new SettingsFragment());
+                    w.setStatusBarColor(ContextCompat.getColor(this, R.color.purple));
                     break;
             }
             return true;
         });
 
 
-        binding.bottomNavigationView.findViewById(R.id.profile).performClick();
-
 
     }
 
-    private void replaceFragment(Fragment fragment) {
+    public void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
