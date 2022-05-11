@@ -24,7 +24,7 @@ import java.util.ArrayList;
  */
 public class HomeFragment extends Fragment {
 
-    LinearLayout btnMap, btnCal;
+    LinearLayout btnMap, btnCal, btnLib, btnFaq;
 
     ImageSlider imageSlider;
 
@@ -76,6 +76,8 @@ public class HomeFragment extends Fragment {
 
         btnMap = (LinearLayout) view.findViewById(R.id.btnMap);
         btnCal = (LinearLayout) view.findViewById(R.id.btnCal);
+        btnLib = (LinearLayout) view.findViewById(R.id.btnLib);
+        btnFaq = (LinearLayout) view.findViewById(R.id.btnFaq);
 
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +93,19 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        btnLib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LibraryActivity.class));
+            }
+        });
 
+        btnFaq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), FaqActivity.class));
+            }
+        });
 
         imageSlider = view.findViewById(R.id.image_slider);
 
