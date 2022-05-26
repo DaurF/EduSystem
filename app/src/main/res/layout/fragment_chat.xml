@@ -3,39 +3,273 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ChatFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:layout_marginTop="10dp"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_profile_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="@null"
+                android:src="@drawable/ic_back_ios_black"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:fontFamily="@font/montserrat_alternates_semibold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:letterSpacing="0.04"
                 android:text="Messages"
                 android:textColor="@color/black"
-                android:textSize="34sp" />
-        </LinearLayout>
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/profile"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/search_contacts"
+            android:layout_width="380dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_background"
+            android:letterSpacing="0.04"
+            android:paddingLeft="30dp"
+            android:text="SEARCH CONTACTS"
+            android:textColor="#8c8c8c"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/favourites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_below="@+id/search_contacts"
+            android:layout_marginTop="30dp"
+            android:text="Favourites"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:id="@+id/fav_images"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/favourites">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/profile_circle_1" />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/profile_circle_2"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/profile_circle_3"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/profile_circle_4"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/fav_images"
+            android:layout_marginTop="15dp"
+            android:background="@color/silver" />
+
+        <LinearLayout
+            android:layout_below="@id/line"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical"
-            android:background="@color/white">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/profile_image_1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/profile_circle_1"/>
+                <LinearLayout
+                    android:layout_toRightOf="@+id/profile_image_1"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Andrew Mathers"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manager"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.04"
+                        android:textStyle="bold"
+                        android:textColor="@color/silver"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/profile_image_2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/profile_circle_2"/>
+                <LinearLayout
+                    android:layout_toRightOf="@+id/profile_image_2"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Raymond Lennard"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chief"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.04"
+                        android:textStyle="bold"
+                        android:textColor="@color/silver"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/profile_image_3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/profile_circle_3"/>
+                <LinearLayout
+                    android:layout_toRightOf="@+id/profile_image_3"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daniel Moore"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Engineer"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.04"
+                        android:textStyle="bold"
+                        android:textColor="@color/silver"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/profile_image_4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/profile_circle_4"/>
+                <LinearLayout
+                    android:layout_toRightOf="@+id/profile_image_4"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="John Phillips"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lawyer"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.04"
+                        android:textStyle="bold"
+                        android:textColor="@color/silver"/>
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </FrameLayout>

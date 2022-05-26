@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg">
+
+    <ImageView
+        android:id="@+id/emoji"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_sad"/>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_below="@id/emoji"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to quit?"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/tv"
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="120dp"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_no"
+            android:text="No"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_yes"
+            android:layout_width="120dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:background="@drawable/btn_yes"
+            android:text="Yes"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

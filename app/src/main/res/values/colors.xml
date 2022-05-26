@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_gray">#f2f3f5</color>
     <color name="blue">#3E45C9</color>
-    <color name="dark_blue">#3743cd</color>
+    <color name="dark_blue">#00008B</color>
     <color name="gray">#808080</color>
     <color name="silver">#C0C0C0</color>
     <color name="dark_gray">#A9A9A9</color>
@@ -18,4 +18,5 @@
     <color name="sky_blue">#00BFFF</color>
     <color name="dodger_blue">#1E90FF</color>
     <color name="black_light">#282828</color>
+    <color name="baby_blue">#ADD8E6</color>
 </resources>

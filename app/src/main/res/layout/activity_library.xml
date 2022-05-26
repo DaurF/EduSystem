@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LibraryActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/search_books"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/ic_back_android" />
+            <EditText
+                android:layout_width="240dp"
+                android:layout_centerInParent="true"
+                android:layout_height="45dp"
+                android:background="@drawable/search_background"
+                android:drawableRight="@drawable/ic_search"
+                android:letterSpacing="0.04"
+                android:padding="5dp"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_books"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/my_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair_display_sc_bold"
+                android:text="My Books"
+                android:textColor="@color/dark_blue"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:id="@+id/my_books_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_book"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="165dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/book_1" />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="165dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/book_2" />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="165dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/book_3" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/explore_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_books_images"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/playfair_display_sc_bold"
+                android:text="Explore More"
+                android:textColor="@color/dark_blue"
+                android:textSize="22sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/books_1"
+                android:layout_below="@+id/explore_more"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="105dp"
+                        android:src="@drawable/book_4" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="Regulus"
+                            android:textColor="@color/black_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="de Saint-Exupéry"
+                            android:textColor="@color/silver"
+                            android:textSize="10sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating1"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:stepSize="0.1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="105dp"
+                        android:src="@drawable/book_1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="Regulus"
+                            android:textColor="@color/black_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="de Saint-Exupéry"
+                            android:textColor="@color/silver"
+                            android:textSize="10sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating2"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="3"
+                            android:stepSize="0.1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/books_2"
+                android:layout_below="@+id/books_1"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="105dp"
+                        android:src="@drawable/book_5" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="See Mes"
+                            android:textColor="@color/black_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="Nicholas Sparks"
+                            android:textColor="@color/silver"
+                            android:textSize="10sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating3"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="5"
+                            android:stepSize="0.1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="105dp"
+                        android:src="@drawable/book_6" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="Doctor Sleep"
+                            android:textColor="@color/black_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="Stephen King"
+                            android:textColor="@color/silver"
+                            android:textSize="10sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating4"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:stepSize="0.1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/books_3"
+                android:layout_below="@+id/books_2"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="105dp"
+                        android:src="@drawable/book_7" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="The Prophet"
+                            android:textColor="@color/black_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="Kahlil Gibran"
+                            android:textColor="@color/silver"
+                            android:textSize="10sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating5"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="3"
+                            android:stepSize="0.1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="105dp"
+                        android:src="@drawable/book_8" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="'Salem's Lot"
+                            android:textColor="@color/black_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/playfair_display_sc_bold"
+                            android:text="Stephen King"
+                            android:textColor="@color/silver"
+                            android:textSize="10sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating6"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:stepSize="0.1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

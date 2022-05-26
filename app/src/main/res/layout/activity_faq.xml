@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaqActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:src="@drawable/ic_back_android_blue" />
+
+    <TextView
+        android:id="@+id/faq_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:layout_centerHorizontal="true"
+        android:letterSpacing="0.04"
+        android:text="FAQ"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/que_ans1"
+        android:layout_below="@+id/faq_text"
+        android:paddingVertical="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/que1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="What is EduS?"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/show1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_expand_more" />
+            <ImageView
+                android:id="@+id/hide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:src="@drawable/ic_hide"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@+id/que1"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_gray" />
+        <TextView
+            android:id="@+id/ans1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="30dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/line1"
+            android:visibility="gone"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="It is an educational system designed to make life easier for students"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/que_ans2"
+        android:layout_below="@+id/que_ans1"
+        android:paddingVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/que2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="When did app development start?"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/show2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_expand_more" />
+            <ImageView
+                android:id="@+id/hide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:src="@drawable/ic_hide"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@+id/que2"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_gray" />
+        <TextView
+            android:id="@+id/ans2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="30dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/line2"
+            android:visibility="gone"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Development started in March 2022"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

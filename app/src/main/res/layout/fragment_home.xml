@@ -247,7 +247,7 @@
             android:id="@+id/image_slider"
             android:layout_width="match_parent"
             android:layout_marginTop="5dp"
-            android:layout_height="200dp"
+            android:layout_height="190dp"
             android:layout_marginHorizontal="20dp"
             app:iss_corner_radius="@integer/material_motion_duration_short_1"
             app:iss_auto_cycle="true"

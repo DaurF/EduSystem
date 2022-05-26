@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -24,9 +25,11 @@ import java.util.ArrayList;
  */
 public class HomeFragment extends Fragment {
 
-    LinearLayout btnMap, btnCal;
+    LinearLayout btnMap, btnCal, btnLib, btnFaq;
 
     ImageSlider imageSlider;
+
+    ImageView notificBtn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -74,13 +77,31 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        btnLib = (LinearLayout) view.findViewById(R.id.btnLib);
         btnMap = (LinearLayout) view.findViewById(R.id.btnMap);
         btnCal = (LinearLayout) view.findViewById(R.id.btnCal);
+        btnFaq = (LinearLayout) view.findViewById(R.id.btnFaq);
+
+        notificBtn = (ImageView) view.findViewById(R.id.notification_icon);
 
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), DigitalMapActivity.class));
+            }
+        });
+
+        btnLib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LibraryActivity.class));
+            }
+        });
+
+        notificBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), NotificationsActivity.class));
             }
         });
 
@@ -91,7 +112,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
+        btnFaq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), FaqActivity.class));
+            }
+        });
 
         imageSlider = view.findViewById(R.id.image_slider);
 
@@ -103,6 +129,4 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
-
-
 }
