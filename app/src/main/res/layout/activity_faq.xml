@@ -147,7 +147,4 @@
             android:fontFamily="@font/poppins_semibold"
             android:text="Development started in March 2022"/>
     </RelativeLayout>
-
-
-
 </RelativeLayout>

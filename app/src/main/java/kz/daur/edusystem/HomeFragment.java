@@ -26,10 +26,8 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     LinearLayout btnMap, btnCal, btnLib, btnFaq;
-
-    ImageSlider imageSlider;
-
     ImageView notificBtn;
+    ImageSlider imageSlider;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,17 +75,23 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        btnLib = (LinearLayout) view.findViewById(R.id.btnLib);
         btnMap = (LinearLayout) view.findViewById(R.id.btnMap);
         btnCal = (LinearLayout) view.findViewById(R.id.btnCal);
+        btnLib = (LinearLayout) view.findViewById(R.id.btnLib);
         btnFaq = (LinearLayout) view.findViewById(R.id.btnFaq);
-
         notificBtn = (ImageView) view.findViewById(R.id.notification_icon);
 
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), DigitalMapActivity.class));
+            }
+        });
+
+        btnCal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), CalendarActivity.class));
             }
         });
 
@@ -102,13 +106,6 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), NotificationsActivity.class));
-            }
-        });
-
-        btnCal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), CalendarActivity.class));
             }
         });
 
@@ -129,4 +126,6 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+
+
 }
