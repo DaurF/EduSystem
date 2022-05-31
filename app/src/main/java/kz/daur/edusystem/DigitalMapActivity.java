@@ -16,6 +16,9 @@ public class DigitalMapActivity extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setDomStorageEnabled(true);
         webView.loadUrl("http://aitudigitalmap.tilda.ws");
     }
 }

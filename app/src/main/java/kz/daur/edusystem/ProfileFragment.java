@@ -1,9 +1,11 @@
 package kz.daur.edusystem;
 
+import android.content.Intent;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.text.TextPaint;
@@ -12,7 +14,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,8 +35,15 @@ import android.widget.TextView;
  */
 public class ProfileFragment extends Fragment {
 
-    TextView show, description, hide;
+    TextView show, tvBio, hide;
     ImageButton btn_profile_back;
+    ImageView btnSettings;
+    Button btn_edit;
+
+    private FirebaseUser user;
+    private DatabaseReference reference;
+
+    private String userID;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -72,8 +93,10 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         show = (TextView) view.findViewById(R.id.show);
-        description = (TextView) view.findViewById(R.id.description);
+        tvBio = (TextView) view.findViewById(R.id.tvBio);
         hide = (TextView) view.findViewById(R.id.hide);
+        btnSettings = (ImageView) view.findViewById(R.id.btnSettings);
+        btn_edit = (Button) view.findViewById(R.id.btn_edit);
 
         btn_profile_back = (ImageButton) view.findViewById(R.id.btn_profile_back);
 
@@ -83,12 +106,80 @@ public class ProfileFragment extends Fragment {
         setTextViewColor(hide, getResources().getColor(R.color.dodger_blue),
                 getResources().getColor(R.color.sky_blue));
 
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        userID = user.getUid();
+
+        final TextView tvFullName = (TextView) view.findViewById(R.id.tvFullName);
+        final TextView tvAge = (TextView) view.findViewById(R.id.tvAge);
+        final TextView tvCity = (TextView) view.findViewById(R.id.tvCity);
+        final TextView tvCountry = (TextView) view.findViewById(R.id.tvCountry);
+        final TextView tvDateOfBirth = (TextView) view.findViewById(R.id.tvDateOfBirth);
+        final TextView tvJob = (TextView) view.findViewById(R.id.tvJob);
+        final TextView tvEdu = (TextView) view.findViewById(R.id.tvEdu);
+        final TextView tvGender = (TextView) view.findViewById(R.id.tvGender);
+        tvBio = (TextView) view.findViewById(R.id.tvBio);
+
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userProfile = snapshot.getValue(User.class);
+
+                if(userProfile != null) {
+                    String fullName = userProfile.fullName;
+                    String age = userProfile.age;
+                    String city = userProfile.city;
+                    String country = userProfile.country;
+                    String dateOfBirth = userProfile.dateOfBirth;
+                    String job = userProfile.job;
+                    String edu = userProfile.edu;
+                    String biography = userProfile.biography;
+                    Boolean gender = userProfile.gender;
+
+                    tvFullName.setText(fullName);
+                    tvAge.setText(age);
+                    tvCity.setText(city);
+                    tvCountry.setText(country);
+                    tvDateOfBirth.setText(dateOfBirth);
+                    tvJob.setText(job);
+                    tvEdu.setText(edu);
+                    tvBio.setText(biography);
+                    if(gender == false ) {
+                        tvGender.setText("Male");
+                    } else if(gender == true) {
+                        tvGender.setText("Female");
+                    }
+
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getActivity(), "Something wrong happened!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), EditProfile.class));
+            }
+        });
+
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+            }
+        });
+
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 show.setVisibility(View.INVISIBLE);
                 hide.setVisibility(View.VISIBLE);
-                description.setMaxLines(Integer.MAX_VALUE);
+                tvBio.setMaxLines(Integer.MAX_VALUE);
             }
         });
 
@@ -98,7 +189,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 show.setVisibility(View.VISIBLE);
                 hide.setVisibility(View.INVISIBLE);
-                description.setMaxLines(3);
+                tvBio.setMaxLines(3);
             }
         });
 

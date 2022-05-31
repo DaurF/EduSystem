@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    Button sign_btn;
+    Button sign_btn, signup_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
         sign_btn = (Button) findViewById(R.id.sign_btn);
+        signup_btn = (Button) findViewById(R.id.signup_btn);
+
+        signup_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(WelcomeActivity.this, RegisterActivity.class));
+            }
+        });
 
         sign_btn.setOnClickListener(new View.OnClickListener() {
             @Override

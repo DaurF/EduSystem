@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@null"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btn_close"
+            android:fontFamily="@font/poppins_semibold"
+            android:letterSpacing="0.03"
+            android:text="Profile Info"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:background="@null"
+            android:src="@drawable/ic_check" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/top_layout">
+
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full name"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvFullName"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="Full Name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etFullName"
+            android:layout_marginTop="25dp"
+            android:text="Age"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvAge"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="Age"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etAge"
+            android:layout_marginTop="25dp"
+            android:text="Gender"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp" />
+        <RelativeLayout
+            android:id="@+id/swGender"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Switch
+                android:id="@+id/sw_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/male_fe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/sw_g"
+                android:text="Male/Female"
+
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/swGender"
+            android:text="City"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvCity"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="City"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/etCity"
+            android:text="City"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etCountry"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvCountry"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="Country"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/etCountry"
+            android:text="Date of Birth"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etDateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvDateOfBirth"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="Date of Birth"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/etDateOfBirth"
+            android:text="Job"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etJob"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvJob"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="Job"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvEdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etJob"
+            android:layout_marginTop="25dp"
+            android:text="Education"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etEdu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvEdu"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="Education"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEdu"
+            android:layout_marginTop="25dp"
+            android:text="Biography"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etBio"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvBio"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_profile_full_name"
+            android:letterSpacing="0.02"
+            android:paddingLeft="20dp"
+            android:text="Biography"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

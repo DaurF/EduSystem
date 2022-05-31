@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "405266157438",
+    "project_id": "auth-d17a3",
+    "storage_bucket": "auth-d17a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405266157438:android:e4cb0682a73a8624e66d2f",
+        "android_client_info": {
+          "package_name": "kz.daur.edusystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405266157438-4cisdnl8ini1sajmpvfsfmu37uae79u4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIogbqWkrHvhCaMoykeTdo62Xu3iKz6fk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405266157438-4cisdnl8ini1sajmpvfsfmu37uae79u4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
